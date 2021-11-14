@@ -1,0 +1,365 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-weight: 100;
+}
+
+header {
+
+
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: none;
+    letter-spacing: 1px;
+    height: 90px;
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    
+    transition: all 1s ease 0s;
+    color: rgb(255, 255, 255);
+    
+    
+    
+    
+
+}
+.apply-btn:hover {
+    transition: .3s;
+    border-radius: 10px;
+    border: 3px solid #dfd9d9;
+    background-color: transparent;
+}
+
+
+.current {
+    
+ 
+    transition: 1s;
+   
+    
+    border-radius: 6px;
+    background-color: #ef5455;
+    
+}
+
+.current-2{
+    transition: 1s;
+   
+   
+    border-radius: 6px;
+    background-color: #ef5455;
+}
+
+
+
+.navbar a:visited {
+    
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.navbar a:hover {
+    text-decoration: none;
+
+}
+
+.navbar li {
+    
+   
+    
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+.navbar h1{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.navbar ul {
+    
+    right: 0px;
+}
+
+.navbar {
+    transition: .5s;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    padding: 30px 5%;
+    height: 95px;
+    width: 100%;
+    
+    
+}
+.nav-links {
+   
+    display: flex;
+    flex-wrap: nowrap;
+   
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 18px;
+    align-items: center;
+    flex-direction: row;
+    width:auto;
+    margin-left: 0;
+    
+  
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height:300px;
+    padding-top: 40px;
+    background-color: #ef5455;
+    align-items: center;
+    row-gap: 10px;
+    position: relative;
+    bottom: 0;
+  
+  }
+  
+  footer a {
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: .8em;
+    letter-spacing: 2px;
+  
+  }
+  .links {
+      display: flex;
+      flex-wrap: nowrap;
+  }
+  
+  
+  
+  
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   
+    
+  }
+  
+  .contacts a {
+      margin: 0;
+  
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    row-gap: 4px;
+    height: auto;
+    color: black;
+    background-color: #d7dbe0;
+  }
+  
+  footer button {
+
+    font-weight: bold;
+    margin-top: 15px;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    width: 140px;
+    height: 35px;
+    border-radius:10px;
+    font-size:15px;
+    letter-spacing: 2px;
+    border-style: solid;
+  }
+  footer button a:visited:hover{
+      color: none;
+  }
+  footer button a:visited{
+      color:unset;
+  }
+  footer button:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    
+  }
+  
+  nav.sticky{
+    transition: .5s;
+    position: fixed;
+    color: black;
+    background-color: rgb(255, 255, 255);
+  
+    border-bottom: 1px solid gray;
+}
+nav.sticky a {
+    color: rgb(0, 0, 0);
+}
+nav.sticky a:visited {
+    color: black;
+}
+
+
+nav.sticky h1 {
+    color: black;
+}
+
+.team {
+    height: 600px;
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+
+    nav.sticky {
+        background: none;
+        border: 0;
+    }
+    nav.sticky a {
+        color: white;
+    }
+    nav.sticky a:visited {
+        color: white;
+    }
+    
+    .line {
+        width: 30px;
+        height: 3px;
+        background: rgb(194, 99, 99);
+        margin: 5px;
+    }
+    
+    .nav-links {
+        top: 0;
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        gap: 50px;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+    .nav-links li a {
+        font-size: 18px;
+        color: white;
+    }
+    .nav-links.open li a {
+        
+        border: 1px solid gray;
+        border-radius: 15px;
+        color: black;
+        font-weight: 900;
+    }
+    .nav-links.open li a:hover {
+        background: #fa8c8c;
+    }
+    .nav-links.open {
+        display: flex;
+        
+        clip-path: circle(1500px at 90% -10%);
+        -webkit-clip-path: circle(1500px at 90% -10%);
+    }
+    
+    .logo {
+        display: none;
+    }
+    .logo.open {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        z-index: 2;
+        width: 100%;
+    }
+    
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+       
+        
+    }
+    .nav-links li {
+        width: 50%;
+       
+    }
+    header{
+        
+        
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    .logo h1 {
+        display: none;
+    }
+    
+    
+    
+    .nav-links{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        display: none;
+    }
+
+    .text-container {
+        margin-left: 20px;
+        margin-top: 300px;
+        height: 100%;
+        width: 50%;
+    }
+    
+}
