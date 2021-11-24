@@ -8,7 +8,7 @@
     <form class="apply-form" action="" method="POST">
         {% csrf_token %}
         <h1 class="apply-title">The Junior Hands Association</h1>
-        <h3 class="apply-subtitle">Application Form</h3>
+        <h3 class="apply-subtitle">Membership Application Form</h3>
         
         <h2>Full Name</h2>
         <div>
@@ -92,7 +92,7 @@
 
             
         </div>
-        <h2>School</h2>
+        <h2>School <span class="notreq">(NOT REQUIRED)</span></h2>
         <div>
             
             <section>
@@ -106,12 +106,7 @@
             </section>
         </div>
         
-        {% for key, value in form.errors.items %}
-               
-                  {{ value }}
-               
-            {% endfor %}
-        {{ form.non_field_errors }}
+   
         <div class="check">
             <div>
                 {{form.check}}
@@ -125,15 +120,22 @@
         </div>
         
         <input class="submit-btn" type="submit" value="Submit">
-        
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Please use a valid email address.
+        </div>
+
+        {% endif %}
+    
         {% if messages %}
-        <ul class="messages">
+        <div class="alert alert-success" role="alert" style="margin: 0 auto;text-align:center;">
             {% for message in messages %}
-            <li  {% if message.tags %} {% endif %}> {{ message }} </li>
+                {{ message }}
             {% endfor %}
-        </ul>
+        </div>
         {% endif %}
         
     </form>
 </div>
+
 {% endblock %}

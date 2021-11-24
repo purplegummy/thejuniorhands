@@ -16,8 +16,12 @@ GRADE_CHOICES = [
     ('SR', 'Senior')
 ]
 DAYS = []
+YEARS = []
 for i in range(1, 32):
     DAYS.append((str(i), str(i)))
+
+for i in range (1920, 2022):
+    YEARS.append((i, i))
 
 MONTHS = [
     ('january', 'January'),
@@ -34,22 +38,23 @@ MONTHS = [
     ('december', 'December'),
 
 ]
+print(YEARS)
 # Create your models here.
 class Applicant(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.CharField(max_length=100, validators=[validate_email])
     phone = models.IntegerField()
-    gender = models.CharField(max_length=100, choices=GENDER_CHOICES, default=None)
-    grade  = models.CharField(max_length=100, choices=GRADE_CHOICES, default=None)
-    school = models.CharField(max_length=100)
-    birthday = models.CharField(max_length=30, choices=DAYS, default=None)
-    birthmonth = models.CharField(max_length=30, choices=MONTHS, default=None)
-    birthyear = models.IntegerField(default=None)
+    gender = models.CharField(max_length=100, choices=GENDER_CHOICES, default=None, blank=True)
+    grade  = models.CharField(max_length=100, choices=GRADE_CHOICES, default=None, blank=True)
+    school = models.CharField(max_length=100, blank=True)
+    birthday = models.CharField(max_length=30, choices=DAYS, default=None, blank=True)
+    birthmonth = models.CharField(max_length=30, choices=MONTHS, default=None, blank=True)
+    birthyear = models.IntegerField(default=None, choices=YEARS, blank=True)
     street_address = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
-    county = models.CharField(max_length=100)
+    county = models.CharField(max_length=100, default=None)
     zip_code = models.IntegerField()
     check = models.BooleanField()
     readCheck = models.BooleanField()

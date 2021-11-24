@@ -20,18 +20,18 @@
 
 }
 .contact-us {
-    
+  
     margin-top: 2.7em;
     text-align: center;
-    color: rgb(255, 255, 255);
-    text-shadow: 5px 5px 1px gray;
+    color: #ef5455;
+    text-shadow: 0px 0px 1px rgb(63, 63, 63);
     font-size: 4em;
     font-weight: 100;
     
 }
 .contact-section-parent {
    
-    width: 61%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,13 +41,14 @@
 .contact-form {
     box-shadow: 0px 0px 5px dimgray;;
     margin-left: auto;
+    margin-top: 1em;
     border-radius: 1%;
-    height: 56em;
+    
 
     background: rgb(255, 255, 255);
     width: 30em;
     color: dimgray;
-    padding: 2em 1em 8em 1em;
+    padding: 2em 1em 3em 1em;
    
 }
 .contact-form section{
@@ -152,12 +153,12 @@
 }
 .accent {
     font-weight: 400;
-    text-shadow: 2px 2px 30px rgb(255, 173, 173);
-    color: #ff6666;
+    color: #ef5455;
+    text-shadow: 0px 0px 2px rgb(63, 63, 63);
 }
 .contact-form .contact-btn {
     border: none;
-    background: rgb(255, 81, 81);
+    background: #ef5455;
     color: white;
     font-weight: 900;
     font-size: 1em;
@@ -165,6 +166,7 @@
     height: 2.8em;
     position: relative;
     margin: 1.5em auto;
+ 
   
     
 }
@@ -178,7 +180,7 @@
   
     width: 30em;
   
-    height: 54em;
+  
     background:rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -199,7 +201,7 @@
     letter-spacing: 2px;
 }
 
-.contacts-col h1, .contacts-col p{
+.contacts-col p{
     margin-left: 8em;
     color: rgb(0, 0, 0);
     font-weight: 200;
@@ -210,11 +212,14 @@
 }
 .contacts-col a:hover {
     transition: 1s;
-    color:rgb(255, 81, 81);
+    color:#ef5455;
 }
 .contacts-col h1 {
+    font-size: 1.5em;
     margin-left: 5.3em;
     margin-bottom: .5em;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
 }
 .contacts-col i {
     color: rgb(255, 124, 124);
@@ -222,23 +227,68 @@
     
     margin: 0;
 }
+.cont-apply {
+    margin-top: 1em;
+    border-top: 1px solid gray;
 
-@media screen and (max-width: 990px) {
+    padding: 2%;
+    width: 121.5%;
+  
+}
+.contacts-col .cont-apply h1 {
+    letter-spacing: 1px;
+    font-size: 1.6em;
+    margin: 1em 0;
+  
+}
+.contacts-col .cont-apply h2 {
+    letter-spacing: 0;
+    text-shadow: none;
+    font-size: 1.1em;
+}
+.cont-apply button {
+    
+    transition: 1s;
+    width: 7.5em;
+    height: 2.5em;
+    background:rgb(255, 91, 91);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.cont-apply button:hover {
+    transition: 1s;
+    cursor: pointer;
+    background:rgb(255, 139, 139);
+    width: 8em;
+    height: 3em;
+}
+@media screen and (max-width: 1100px) {
     .contact-section-parent .contact-form, .contact-section-parent .contacts-col {
         margin: 0 auto;
     }
     .contact-section-parent .contact-form {
         margin-bottom: 2em;
     }
+    .cont-apply {
+        width: 110%;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
+    .contact-us{
+        margin-top: 1em;
+    }
+    .contact-form {
+        height: 66em;
+    }
+    
     .contact-section-parent {
-        width: 30em;
+        width: 22em;
     }
     
     .contact-section-parent .contact-form, .contact-section-parent .contacts-col {
-        width: 24em;
+        width: 100%;
     }
     .contact-us {
         font-size: 3em;
@@ -248,5 +298,8 @@
    }
    .contacts-col h1 {
        margin-left: 4.7em;
+   }
+   .cont-apply {
+       width: 100%;
    }
 }

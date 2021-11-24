@@ -5,7 +5,8 @@ class upcomingEvent(models.Model):
     day = models.CharField(max_length=15)
     month = models.CharField(max_length=3)
     location = models.CharField(max_length=200)
-
+    time = models.CharField(max_length=40)
+    desc = models.CharField(max_length=700)
     def __str__(self):
             return self.eventName + " " + self.month.lower().capitalize()+ " " + self.day
 

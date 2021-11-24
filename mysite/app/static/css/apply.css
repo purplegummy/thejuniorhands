@@ -11,7 +11,7 @@
     margin-top: -7em;
     padding-top: 10em;
     width: 100%;
-    height: 100em;
+    height: 110em;
     background: url(../sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@
     flex-direction: column;
   
     border-radius: .5%;
-    width: 46em;
+    width: 50em;
     padding: 2em 0;
     margin: 3em auto;
     box-shadow: 0px 0px 1px 1px rgb(255, 122, 122);
@@ -60,21 +60,11 @@
     font-weight: 500;
     font-size: 1.2em;
     margin-bottom: .5em;
-    margin-left: 4.2em;
+    margin-left: 3em;
     color: rgb(255, 96, 96);
 }
-.style:focus,
-.style:valid {
- 
-  border: solid #701515 1px;
-}
-.style:focus~label,
-.style:valid~label {
-  transition: .2s;
-  font-size: 14px;
-  top: -10px;
-  color: rgb(255, 96, 96);
-}
+
+
 
 .apply-form div {
 
@@ -179,7 +169,10 @@
     color: rgb(255, 0, 0);
 
 }
-
+.apply-form .notreq {
+    font-size: .9em;
+    color: gray;
+}
 .messages {
         margin: 0 auto;
         list-style: none;

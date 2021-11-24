@@ -18,7 +18,7 @@ body {
 
 header {
 
-    background: url(../about-hero.jpg);
+    background: url(../about-hero-sat.jpg);
     
     display: flex;
     justify-content: space-between;
@@ -173,27 +173,28 @@ header {
     color: rgb(51, 51, 51);
     background-color: #ffffff;
     width: 100%;
-    height: auto;
-    padding: 50px 10%;
+    min-height: 32em; 
+    text-indent: 1%;
+    padding: 5em 16%;
     
     
 }
 
 .mission h2 {
-    margin-top: 30px auto;
+
     text-align: center;
-    font-size: 35px;
+    font-size:2.4em;
     font-weight: 100;
     color: #ef5455;
 }
 
 .mission p{
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 18px;
-    text-align: center;
-    color: #000000;
+    
+    color: dimgray;
     font-weight: 100;
-    line-height: 1.5;
+    line-height: 2.5;
 }
 .logo {
     display: flex;
@@ -231,7 +232,9 @@ nav.sticky h1 {
 }
 
 
-
+.linkwrapper {
+    text-decoration: none;
+}
 
 .help-parent {
   
@@ -290,19 +293,21 @@ nav.sticky h1 {
     
     transition: .5s;
     cursor:pointer;
-    border: 2px solid #ffa4a4;
+    border: 2px solid #ef5455;
 }
 .you-help div img {
+    width: 6.5em;
+    height: 6.5em;
     margin-top: 2em;
-    background:rgb(233, 138, 138);
+   
     padding: 2%;
-    border-radius: 45%;
+    border-radius: 48%;
 }
 .you-help div h2{
     color: rgb(148, 148, 148);
     border-bottom:1px solid rgb(119, 119, 119);
   
-    margin-bottom: 20px;
+    margin: 1em 0 0 0;
     font-size: 30px;
     font-weight: 100;
 }
@@ -403,9 +408,7 @@ nav.sticky h1 {
     font-weight: 300;
 
 }
-.app-sec div p {
-  
-}
+
 .parent {
  
   
@@ -435,6 +438,11 @@ nav.sticky h1 {
   
 
   
+}
+.upcoming .no-event {
+    margin-top: .5em;
+    font-size: 2em;
+    color: dimgray;
 }
 .event {
     transition: 1s;
@@ -563,7 +571,13 @@ footer {
     color: black;
     background-color: #d7dbe0;
   }
-  
+  footer a {
+    color: white;
+  }
+  footer a:hover:visited {
+    color:white;
+  }
+
   footer button {
 
     font-weight: bold;
@@ -579,7 +593,7 @@ footer {
     border-style: solid;
   }
   footer button a:visited:hover{
-      color: none;
+      color: black;
   }
   footer button a:visited{
       color:unset;
@@ -619,11 +633,11 @@ footer {
         top: 0;
         position: fixed;
         background-color: rgb(255, 255, 255);
+        background: url(../about-hero-sat.jpg);
         
-        height: auto;
         width: 100%;
         flex-direction: column;
-        gap: 50px;
+        row-gap: 50px;
         clip-path: circle(100px at 90% -10%);
         -webkit-clip-path: circle(100px at 90% -10%);
         transition: all 1s ease;
@@ -640,7 +654,7 @@ footer {
         
         border: 1px solid gray;
         border-radius: 15px;
-        color: black;
+        color: rgb(255, 255, 255);
         font-weight: 900;
     }
     .nav-links.open li a:hover {
@@ -713,6 +727,7 @@ footer {
         font-size: 30pt;
     }
     .mission p {
+        text-align: center;
         font-size: 12pt;
     }
     .upcoming {
@@ -730,8 +745,16 @@ footer {
         width: 8em;
         margin: 0 auto;
     }
+    .app-sec div button:hover{
+        width: 10em;
+        height: 3em;
+    }
     .app-sec div h1, .app-sec div p {
         text-align: center;
     
+    }
+    footer .section-links {
+        flex-wrap: nowrap;
+        font-size: .7em;
     }
 }

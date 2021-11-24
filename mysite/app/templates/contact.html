@@ -11,7 +11,7 @@
         
 </div>
 <h1 class="contact-message-header">We Need <span style="color:rgb(255, 81, 81);">Feedback!</span></h1>
-<p class="contact-message">In order to impact the community, we need to hear from the community.</p>
+<p class="contact-message">In order to impact the community, we need to hear from you.</p>
 
 <div class="contact-section-parent" id="emailus">
     <form class="contact-form" action="" method="POST">
@@ -37,14 +37,16 @@
         {{ form.subject|attr:"placeholder: Ex. Event Opportunity" }}
         <h1>Message</h1>
         {{ form.message|attr:"placeholder: Ex. My Message" }}
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li  {% if message.tags %} {% endif %}> {{ message }} </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+        
+        
         <input class="contact-btn" type="submit" value="Send Message">
+        {% if messages %}
+        <div class="alert alert-success" role="alert" style="width: 20em;margin: 0 auto;text-align:center;">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
     </form>
     <div class="contacts-col">
         <h2>Find Us</h2>
@@ -80,6 +82,13 @@
             <p>@thejuniorhands</p>
             
         </section>
+        <div class="cont-apply">
+            <h1>Want to do more than messaging?</h1>
+            <h2>Apply to become a member and help us organize events. </h2>
+            <form>
+                <button formaction="{% url 'apply:apply' %}" >Apply</button>
+            </form>
+        </div>
     </div>
 </div>
 

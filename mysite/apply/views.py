@@ -11,10 +11,10 @@ def apply(request, template="apply.html"):
     form = ApplicantForm()
     if request.method == 'POST':
         form = ApplicantForm(request.POST)
-       
+    
         if form.is_valid():
             form.save()
-            messages.success(request, 'Form submission successful! Make Sure To Check Your Email.')
+            messages.success(request, 'Your application has been submitted! Check your email for more information.')
             msg=EmailMessage()
             msg['Subject'] = 'Junior Hands Association Confirmation'
             msg['From'] = "Junior Hands Assocation"

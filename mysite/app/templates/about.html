@@ -4,7 +4,7 @@
 
 <div class="heading">
     <h1>ABOUT US</h1>
-    <h2 class="motivation">We Are Here For A <span>Reason.</span></h2>
+    <h2 class="motivation">Fostering a better educational environment through student-driven activism.</h2>
    
 </div>
 <h1 class="we-title">What We Do?</h1>
@@ -12,35 +12,46 @@
     
     <div>
         <div>
-            <img src="../static/kentucky.png" alt="kentucky">
+            <a href="{% url 'app:home' %}#weare">
+                <img src="../static/kentucky.png" alt="kentucky">
+            </a>
         </div>
      
         <p>We are an association based in Louisville, Kentucky </p>
     </div>
     <div>
         <div>
-          <img src="../static/scholar.png" alt="scholar">
+            <a href="#ms">
+                <img src="../static/scholar.png" alt="scholar">
+           </a>
+          
         </div>
        
         <p>We aim improve the educational environment for everyone</p>
     </div>
-    
     <div>
         <div>
-          <img src="../static/student.png" alt="student">
-        </div>
-       
-        <p>We strive through student organized activism </p>
-    </div>
-    <div>
-        <div>
-          <img src="../static/nodiscrim.png" alt="no-discrim">
+            <a class="nodis" href="#sup">
+                <img src="../static/nodiscrim.png" alt="no-discrim">
+            </a>
+          
         </div>
       
         <p>We seek to serve our community without discrimination</p>
     </div>
+    <div>
+        <div>
+            <a class="youth" href="#sup">
+                <img src="../static/student.png" alt="student">
+            </a>
+          
+        </div>
+       
+        <p>We strive through student organized activism </p>
+    </div>
+    
 </section>
-<section class="sup-parent">
+<section class="sup-parent" id="sup"> 
     <h1 class="sup-title">Supporting Our Community</h1>
     <section class="drop-button">
         <h3>Our Committment To Marginalized Groups</h3>
@@ -66,7 +77,7 @@
 
         <p>With all that being said it is with great pride that we pronounce our unwavering commitment to the youth and all the hopes and dreams that stand beside them. </p>
     </article>
-    <section class="drop-button2">
+    <section class="drop-button2" id="youth">
         <h3>Our Commitment To The Youth</h3>
         <i class="fas fa-grip-lines"></i>
     </section>
@@ -75,11 +86,10 @@
             totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dict</p>
     </article>
 </section>
-<div class="ms" >
+<div class="ms" id="ms" >
     <article>
-        <h2>Mission Statement</h2>
-        <p style="font-size: 1.1em;">Fostering a better educational environment in disadvantaged communities through student-driven activism.</p>
-        <br/>
+        <h2>Vision Statement</h2>
+        
         <p>The Junior Hands Association is a student-led organization that prides 
             itself in fostering a better environment for education. We provide 
             opportunities for high school students across Kentucky to connect with 
@@ -88,7 +98,7 @@
             disadvantaged communities. By emphasizing student-driven activism, we hope to 
             improve the leadership, critical thinking, and creativity of our volunteers. With 
             the goal of improving the situations that impair education, we hope to forge a more 
-            prepared generation of capable citizens. (can change citizens to students)
+            prepared generation of capable citizens.
         </p>
     </article>
     <div>

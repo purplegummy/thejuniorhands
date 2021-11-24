@@ -8,10 +8,6 @@ class ApplicantForm(ModelForm):
         model = Applicant
         fields = '__all__'
   
-        labels = {
-            'first_name': _('First Name'),
-            'last_name': _('Last Name'),
-            
-        }
+        
         
         
