@@ -2,7 +2,7 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django import template
 from .models import Contact, upcomingEvent, Subscription
-from .forms import ContactForm, EmailForm
+from .forms import ContactForm, EmailForm, VolunteerForm
 import smtplib
 from email.message import EmailMessage
 from django.contrib import messages
@@ -57,7 +57,15 @@ def event(request, template="events.html"):
     events = upcomingEvent.objects.all()
     return render(request, template,  {'events': events} )
 
-
+def volunteer(request, template="volunteer.html"):
+    form = VolunteerForm()
+    if request.method == 'POST':
+        form = VolunteerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your Volunteer Request Has Been Submitted.')
+            return HttpResponseRedirect(request.path_info)
+    return render(request, template, {"form": form})
 
 @register.simple_tag
 def get_index(obj, item):

@@ -315,7 +315,88 @@
 
     }
 }
+.apply-parent {
+    border-top: .5px dashed rgb(250, 250, 250);
+    width: 100%;
+    background:rgb(247, 247, 247);
+}
+.app-sec {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    padding: 2em 0em;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+
+
+}
+.app-sec-right {
+    width: 50%;
+    padding: 0 5%;
+}
+.app-sec img {
+    height: 20em;
+    border-radius: 1%;
+    
+}
+
+.app-sec div button {
+    transition: 1s;
+    width: 10em;
+    height: 3em;
+    background:rgb(255, 91, 91);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.app-sec div button:hover{
+    transition: 1s;
+    cursor: pointer;
+    background:rgb(255, 139, 139);
+    width: 12em;
+    height: 3.5em;
+}
+
+.app-btn-parent {
+
+    width: 8em;
+    
+}
+.app-sec div div {
+    
+    
+    text-align: left;
+}
+
+.app-sec div h1 {
+    font-size: 2em;
+    font-weight: 300;
+
+}
 @media screen and (max-width: 800px) {
+    .app-sec img {
+        display: none;
+         
+     }
+     .app-sec div {
+         padding: 0;
+     }
+     .app-btn-parent {
+         width: 8em;
+         margin: 0 auto;
+     }
+     .app-sec div button:hover{
+         width: 10em;
+         height: 3em;
+     }
+     .app-sec div h1, .app-sec div p {
+         text-align: center;
+     
+     }
   .heading h1 {
   
       font-size: 30pt;

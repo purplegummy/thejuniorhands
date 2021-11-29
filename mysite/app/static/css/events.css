@@ -104,7 +104,28 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
 }
+.learn-link:visited {
+    color:white;
+}
+.learn-link:link {
+    color:white;
+    text-decoration: none;
+}
+.learn-link {
+    display: block;
+    text-align: center;
+    padding-top: .9em;
+    transition: 1s;
+    width: 8em;
+    height: 3em;
+    border-radius: 5%;
+    background:rgb(255, 91, 91);
+    border: none;
+    color: white;
+}
 .learn-btn {
+   
+    text-decoration: none;
     margin-left: 6em;
     transition: 1s;
     width: 8em;
@@ -189,7 +210,7 @@ body {
   
   /* The Close Button */
   .close {
-    color: #ef5455;
+    color: dimgray;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -197,7 +218,7 @@ body {
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: #ef5455;
     text-decoration: none;
     cursor: pointer;
   }

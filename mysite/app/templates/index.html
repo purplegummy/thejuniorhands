@@ -115,29 +115,11 @@
             </div>      
         </div>
         <!-- Member Application Section-->
-        <div class="apply-parent" id="app-sec">
-            <section class="app-sec">
-                <div class="app-sec-right">
-                    <div >
-                    <h1>Becoming a member is only one click away</h1>
-                    </div>
-                    <p style="margin: 1em 0 2em 0;">Applying allows you to become eligible to volunteer and organize JHA events</p>
-                    
-                    <div class='app-btn-parent'>
-                        <form>
-                            <button formaction="{% url 'apply:apply' %}" >Apply</button>
-                        </form>
-                        
-                    </div>
-
-                </div>
-                <img src="../static/redtree.png" />
-            
-            </section>
-        </div>
+        
         <!-- mission statement -->
         <div class="parent" id="upcoming">
             <h1> Upcoming Events </h1>
+            <a class="events-link" href="{% url 'app:events' %}"> See Full Events Page </a>
             <div class="upcoming">
                 
                 {% if events %}

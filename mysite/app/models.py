@@ -10,6 +10,7 @@ class upcomingEvent(models.Model):
     def __str__(self):
             return self.eventName + " " + self.month.lower().capitalize()+ " " + self.day
 
+
 class Contact(models.Model):
     firstName = models.CharField(max_length=100)
     lastName = models.CharField(max_length=100)
@@ -25,3 +26,22 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.email
+
+class Volunteer(models.Model):
+    objs = upcomingEvent.objects.all()
+    names = objs.values('eventName')
+    days = objs.values('day')
+    months = objs.values('month')
+    times = objs.values('time')
+    choices = []
+    for i in range(len(names)):
+        choice = ((names[i]['eventName'], names[i]['eventName'] + " @" + months[i]['month'].upper() + " " + days[i]['day'] +  " : " + times[i]['time']))
+        choices.append(choice)
+    print(choices)
+    event = models.CharField(max_length=100, choices=choices, default=None )
+    first_name = models.CharField(max_length=200, default=None)
+    last_name = models.CharField(max_length=250, default=None)
+    v_email = models.CharField(max_length=400)
+    
+    def __str__(self):
+        return self.event + " : " + self.first_name + " " + self.last_name

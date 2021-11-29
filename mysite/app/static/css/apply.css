@@ -9,9 +9,10 @@
 
 .apply-body {
     margin-top: -7em;
+  
     padding-top: 10em;
     width: 100%;
-    height: 110em;
+    height: 115em;
     background: url(../sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -192,7 +193,7 @@
     color: rgb(255, 81, 81);
 }
 .check p {
-    
+    margin-bottom: -3em;
     margin-left: 1em;
     font-size: .8em;
     color: gray;
