@@ -11,7 +11,7 @@ GENDER_CHOICES = [
 ]
 
 GRADE_CHOICES = [
-    ('space', ' '),
+    (None, 'Choose a Gender'),
     ('FR', 'Freshman'),
     ('SO', 'Sophomore'),
     ('JR', 'Junior'),
@@ -26,7 +26,7 @@ for i in range (1920, 2022):
     YEARS.append((i, i))
 
 MONTHS = [
-    ('space', ' '),
+    ('None', ' '),
     ('january', 'January'),
     ('february', 'February'),
     ('march', 'March'),
@@ -47,8 +47,8 @@ class Applicant(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.CharField(max_length=100, validators=[validate_email])
-    phone = models.IntegerField()
-    gender = models.CharField(max_length=100, choices=GENDER_CHOICES, default='space')
+    phone = models.DecimalField(max_digits=10, decimal_places=0)
+    gender = models.CharField(max_length=100, choices=GENDER_CHOICES, default=None, blank=False)
     grade  = models.CharField(max_length=100, choices=GRADE_CHOICES, default=None, blank=True)
     school = models.CharField(max_length=100, blank=True)
     birthday = models.CharField(max_length=30, choices=DAYS, default=None, blank=True)
@@ -59,8 +59,10 @@ class Applicant(models.Model):
     state = models.CharField(max_length=100)
     county = models.CharField(max_length=100, default=None)
     zip_code = models.IntegerField()
-    check = models.BooleanField()
-    readCheck = models.BooleanField()
+    check = models.BooleanField(default=False)
+    readCheck = models.BooleanField(default=False)
+
+    
     
     def __str__(self):
         return self.first_name + " " + self.last_name

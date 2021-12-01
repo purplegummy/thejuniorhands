@@ -9,10 +9,9 @@
 
 .apply-body {
     margin-top: -7em;
-  
-    padding-top: 10em;
     width: 100%;
-    height: 115em;
+    height: 95em;
+    padding-top: 7em;
     background: url(../sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,15 +20,15 @@
 
 }
 
-.apply-form .apply-title {
+.apply-title {
     color: rgb(255, 108, 108);
     font-weight: 900;
     font-size: 1.5em;
     text-align: center;
-    margin:.5em auto;
+    margin:.3em auto;
     
 }
-.apply-form .apply-subtitle {
+.apply-subtitle {
     color: dimgray;
     font-weight: 100;
     font-size:1em;
@@ -96,12 +95,9 @@
     color: rgb(255, 255, 255);
     background: rgb(255, 99, 99);
     margin: 2em auto;
-    
 }
 .submit-btn:hover {
     transition: .2s ease-in-out;
-  
-    
     cursor: pointer;
     background-color: rgb(223, 106, 106);
 }
