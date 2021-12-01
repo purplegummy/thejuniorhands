@@ -10,27 +10,28 @@
         <h1 class="apply-title">The Junior Hands Association</h1>
         <h3 class="apply-subtitle">Membership Application Form</h3>
         
+        <h2>* - Required</h2>
         <h2>Full Name</h2>
         <div>
             <section>
                 {{form.first_name|add_class:"f-name gap style"|attr:"placeholder: Ex. John"}}
-                <label>First Name</label>
+                <label>First Name<span style="color:red">*</span></label>
             </section>
             <section>
                 
                 {{form.last_name|add_class:"f-name style"|attr:"placeholder: Ex. Smith"}}
-                <label>Last Name</label>
+                <label>Last Name<span style="color:red">*</span></label>
             </section>
         </div>
         <h2>Contact</h2> 
         <div class="contact">
             <section>
                 {{form.email|add_class:"c-i gap style"|attr:"placeholder: example@email.com"}}
-                <label>Email Address</label>
+                <label>Email Address<span style="color:red">*</span></label>
             </section>
             <section>
-                {{form.phone|add_class:"c-i style"|attr:"placeholder: ### - ### - ####"}}
-               <label>Phone Number</label>
+                {{form.phone|add_class:"c-i style"|attr:"placeholder: ### ### ####"}}
+               <label>Phone Number<span style="color:red">*</span></label>
             </section>
 
         </div>
@@ -40,7 +41,7 @@
         <div class="address">
             <section>
                 {{form.street_address|add_class:"a-i addy gap style"|attr:"placeholder:Ex. 123 Apple Avenue"}}
-                <label>Street Address</label>
+                <label>Street Address<span style="color:red">*</span></label>
             </section>
         
             
@@ -49,39 +50,39 @@
             
                 <section>
                     {{form.state|add_class:"a-i gap style"|attr:"placeholder: Ex. Kentucky"}}
-                    <label>State</label>
+                    <label>State<span style="color:red">*</span></label>
                 </section>
                 <section>
                 {{form.city|add_class:"a-i style"|attr:"placeholder: Ex. Louisville"}}
-                <label>City</label>
+                <label>City<span style="color:red">*</span></label>
               
                 </section>
         </div>
         <div>
             <section>
                 {{form.county|add_class:"a-i style gap"|attr:"placeholder: Ex. Jefferson County"}}
-               <label>County</label>
+               <label>County<span style="color:red">*</span></label>
             </section>
             <section>
                 {{form.zip_code|add_class:"a-i style"|attr:"placeholder: Ex. 12345"}}
-                <label>Zipcode</label>
+                <label>Zipcode<span style="color:red">*</span></label>
             </section>
         </div>
         <h2>Date of Birth & Gender </h2>
         <div>
             <section>
                 {{form.birthday|add_class:"b-i-s gap style "}}
-                <label>Day</label>
+                <label>Day<span style="color:red">*</span></label>
               
             </section>
             <section>
                 {{form.birthmonth|add_class:"b-i-s gap style "}}
-                <label>Month</label>
+                <label>Month<span style="color:red">*</span></label>
                
             </section>
             <section>
                 {{form.birthyear|add_class:"b-i gap style"|attr:"placeholder:####"}}
-                <label>Year</label>
+                <label>Year<span style="color:red">*</span></label>
                
             </section>
             <section>
@@ -92,7 +93,7 @@
 
             
         </div>
-        <h2>School <span class="notreq">(NOT REQUIRED)</span></h2>
+        <h2>School <span class="notreq"></span></h2>
         <div>
             
             <section>
