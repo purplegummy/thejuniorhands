@@ -33,7 +33,7 @@ header {
     background-attachment: fixed;
 }
 
-.navbar a {
+.navbar a{
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -49,12 +49,22 @@ header {
     
 
 }
-.apply-btn:hover {
-    transition: .3s;
+
+/* #apply-btn {
+    display: block;
+    
+    color: white;
+    background-color: #ef5455;
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
-    border: 3px solid #dfd9d9;
-    background-color: transparent;
+    width: 5em;
+    height: 2em;
 }
+
+.apply-btn:visited {
+    color: white;
+} */
 
 .current {
     transition: 1s;
@@ -131,17 +141,16 @@ header {
 
 
 .text-container {
+    overflow: hidden;
     display: flex;
+    margin-top: -7em;
     flex-direction: column;
     padding: 5%;
-    align-items: center;
     color: white;
-    
-    margin-top: 55px;
-    left: 200px;
+   
     row-gap: 40px;
     width: 100%;
-    top: 400px;
+   
 
 }
 

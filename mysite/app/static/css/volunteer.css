@@ -41,7 +41,7 @@ form {
     border-radius: 1%;
     border: 2px solid #ef5455;
     margin-top: 10em;
-    width: 40%;
+    width:45em;
    
     display: flex;
     flex-direction: column;
@@ -107,4 +107,9 @@ label {
     cursor: pointer;
     background:rgb(255, 139, 139);
    
+}
+@media screen and (max-width: 800px) {
+    form {
+        width: 95%;
+    }
 }

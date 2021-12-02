@@ -48,12 +48,6 @@ header .navbar_ a {
     
 
 }
-.apply-btn:hover {
-    transition: .3s;
-    border-radius: 10px;
-    border: 3px solid #dfd9d9;
-    background-color: transparent;
-}
 
 
 .current {
@@ -361,12 +355,7 @@ nav.sticky h1 {
         display: none;
     }
 
-    .text-container {
-        margin-left: 20px;
-        margin-top: 300px;
-        height: 100%;
-        width: 50%;
-    }
+    
     footer .section-links {
         flex-wrap: nowrap;
         font-size: .7em;

@@ -11,7 +11,7 @@ GENDER_CHOICES = [
 ]
 
 GRADE_CHOICES = [
-    (None, 'Choose a Gender'),
+    (None, 'Choose a Grade'),
     ('FR', 'Freshman'),
     ('SO', 'Sophomore'),
     ('JR', 'Junior'),
@@ -49,7 +49,7 @@ class Applicant(models.Model):
     email = models.CharField(max_length=100, validators=[validate_email])
     phone = models.DecimalField(max_digits=10, decimal_places=0)
     gender = models.CharField(max_length=100, choices=GENDER_CHOICES, default=None, blank=False)
-    grade  = models.CharField(max_length=100, choices=GRADE_CHOICES, default=None, blank=True)
+    grade  = models.CharField(max_length=100, choices=GRADE_CHOICES, default=None, blank=False)
     school = models.CharField(max_length=100, blank=True)
     birthday = models.CharField(max_length=30, choices=DAYS, default=None, blank=True)
     birthmonth = models.CharField(max_length=30, choices=MONTHS, default=None, blank=True)

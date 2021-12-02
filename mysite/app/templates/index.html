@@ -8,7 +8,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+        
         <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/contact.css">
 
     </head>
     <body>
@@ -19,7 +21,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <img src="../static/whitered2.png" alt="logo" width="60" height="60" class="logo-img" />
-                    <h1>Junior Hands Association </h1>
+                    <h1>Junior Hands Assocation </h1>
                 </div>
                 
                 <div class="hamburger">
@@ -50,7 +52,9 @@
        <!-- Hero Text -->
          <div class="text-container">
             <h1>We Are The <span>Change.</span></h1>
-            <a href="{% url 'apply:apply' %}"><button class="apply-btn"> Apply Now</button></a>
+            <!-- <form >
+                <button formaction="{% url 'apply:apply' %}" id="apply-btn">Apply Now</button>
+            </form> -->
             
             
         </div>
@@ -100,7 +104,7 @@
                         
                         </div>
                     </a>
-                    <a class="linkwrapper" href="#">
+                    <a class="linkwrapper" href="{% url 'app:donate' %}">
                         <div>
                             <section class="header">
                                 <img src="../static/donateicon.png" width="100" height="100" />
@@ -153,7 +157,7 @@
                 
                 <a href="https://www.instagram.com/thejuniorhands/" target="_blank"><img src="../static/insta.png" width="55" height="55" alt="insta"></a>
               <a href="https://twitter.com/thejuniorhands" target="_blank"><img src="../static/twitter.png" width="55" height="55" alt="twitter"></a>
-              <a href="https://www.instagram.com/thejuniorhands/" target="_blank"><img src="../static/facebook.png" width="55" height="55" alt="facebook"></a>
+              <a href="https://www.facebook.com/Junior-Hands-Association-102088245579172" target="_blank"><img src="../static/facebook.png" width="55" height="55" alt="facebook"></a>
             </section>
             <section class="links">
                 <a href="{% url 'app:home' %}">HOME</a>
