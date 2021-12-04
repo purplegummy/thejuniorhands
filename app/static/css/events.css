@@ -1,0 +1,288 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-weight: 100;
+}
+.parent {
+    margin: 0 auto;
+    width: 48em;
+}
+.upcoming {
+    margin: 0 auto;
+    width: 100%;
+    padding: 2%;
+  
+
+  
+}
+.upcoming .no-event {
+    margin-top: .5em;
+    font-size: 2em;
+    color: dimgray;
+}
+.event {
+    transition: 1s;
+    display: flex;
+    flex-direction: row;
+   
+    
+    align-items: center;
+    justify-content: center;
+   
+    width: 100%;
+    position: relative;
+ 
+    border-top: 2px solid gray;
+    margin: auto;
+    padding: 20px;
+
+}
+.event:hover {
+    transition: 1s;
+    cursor: pointer;
+    
+    width: calc(99%+2em);
+}
+.date {
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 50%;
+    background-color: #ef5455;
+   
+    width: 100px;
+    height: 100px;
+   
+    justify-content: center;
+    align-items: center;
+    font-size: 8pt;
+}
+.date:hover {
+    cursor: pointer;
+    transition: .5s;
+    background-color:rgb(255, 139, 139);
+    border: 4px solid rgb(255, 113, 113);
+}
+.date h2 {
+    color: white;
+ 
+    font-weight: 300;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 300px;
+    padding: 20px;
+    row-gap: 20px;
+    
+    
+    letter-spacing: 2px;
+}
+.info h2 {
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+}
+.info .event-name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.learn-link:visited {
+    color:white;
+}
+.learn-link:link {
+    color:white;
+    text-decoration: none;
+}
+.learn-link {
+    display: block;
+    text-align: center;
+    padding-top: .9em;
+    transition: 1s;
+    width: 8em;
+    height: 3em;
+    border-radius: 5%;
+    background:rgb(255, 91, 91);
+    border: none;
+    color: white;
+}
+.learn-btn {
+   
+    text-decoration: none;
+    margin-left: 6em;
+    transition: 1s;
+    width: 8em;
+    height: 3em;
+    border-radius: 5%;
+    background:rgb(255, 91, 91);
+    border: none;
+    color: white;
+    
+}
+
+.learn-btn:hover {
+    cursor: pointer;
+    background:rgb(255, 113, 113);
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content div {
+      margin-top: 1.5em;
+      display: flex;
+      flex-direction: row;
+      column-gap: 3%;
+  }
+  .modal-content div p {
+      font-size: 1.3em;
+  }
+  .modal-content .desc{
+    font-size: 1.1em;
+    line-height: 2;
+    margin-top: 1em;
+  }
+  .upcoming-header {
+   
+      margin: 1em auto;
+      margin-top: 2.3em;
+      height: 4.5em;
+      display: flex;
+      flex-direction: row;
+      
+      width: 95%;
+  }
+  .upcoming-header div {
+     
+      row-gap: .5em;
+      display: flex;
+      flex-direction: column;
+
+  }
+  .upcoming-title {
+    text-align: center;
+    margin-left:15%;
+    display: block;
+    
+    
+  }
+  
+  /* Modal Content/Box */
+.modal-title {
+    
+    font-size: 2em;
+    color: rgb(255, 130, 130);
+    font-weight:100;
+  }
+  .modal-content {
+    
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #ef5455;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: dimgray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ef5455;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.back-i {
+    margin-left: .1em;
+    display: block;
+    width: 1.5em;
+    
+    transition:1s;
+    
+    color: #ef5455;
+    background: none;
+}
+.back-link:link {
+    color: dimgray;
+
+}
+.back-link:hover {
+    cursor: pointer;
+    color: black;
+}
+.back-link:visited {
+
+    color: dimgray;
+}
+.back-i:hover {
+    cursor: pointer;
+    transition: 1s;
+    color:#f30000;
+}
+  @media screen and (max-width: 800px) { 
+    .back-link {
+        font-size: .75em;
+    }
+    .upcoming-title {
+        font-size: 1.8em;
+        margin-left: 0;
+    }
+    .modal-content div p {
+        font-size: .9em;
+    }
+    .modal-content {
+        width:95%;
+    }
+    .modal-content .desc {
+        font-size: 1em;
+    }
+    .modal-title {
+        font-size:1.5em;
+    }
+    .event {
+        flex-wrap: wrap;
+    }
+    .info {
+        margin: 2em 0;
+    }
+    .date {
+        margin-bottom: .5em;
+    }
+    .parent {
+        width: 80%;
+    }
+    .learn-btn {
+        margin-left: 0;
+        margin-top: 1.5em;
+    }
+  }

@@ -1,0 +1,10 @@
+.donate-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: dimgray;
+    height: 63em;
+    margin-top: -6em;
+    width: 100%;
+    overflow: hidden;
+}

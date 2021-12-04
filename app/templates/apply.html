@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}JHA - Apply{% endblock %}
+{% block content %}
+<div class="apply-body">
+
+    <form class="apply-form" action="" method="POST">
+        {% csrf_token %}
+        <h1 class="apply-title">The Junior Hands Association</h1>
+        <h3 class="apply-subtitle">Membership Application Form</h3>
+        
+        <h2>* - Required</h2>
+        <h2>Full Name</h2>
+        <div>
+            <section>
+                {{form.first_name|add_class:"f-name gap style"|attr:"placeholder: Ex. John"}}
+                <label>First Name<span style="color:red">*</span></label>
+            </section>
+            <section>
+                
+                {{form.last_name|add_class:"f-name style"|attr:"placeholder: Ex. Smith"}}
+                <label>Last Name<span style="color:red">*</span></label>
+            </section>
+        </div>
+        <h2>Contact</h2> 
+        <div class="contact">
+            <section>
+                {{form.email|add_class:"c-i gap style"|attr:"placeholder: example@email.com"}}
+                <label>Email Address<span style="color:red">*</span></label>
+            </section>
+            <section>
+                {{form.phone|add_class:"c-i style"|attr:"placeholder: ###  ###  ####"}}
+               <label>Phone Number<span style="color:red">*</span></label>
+            </section>
+
+        </div>
+        
+        
+        <h2>Address</h2>
+        <div class="address">
+            <section>
+                {{form.street_address|add_class:"a-i addy gap style"|attr:"placeholder:Ex. 123 Apple Avenue"}}
+                <label>Street Address<span style="color:red">*</span></label>
+            </section>
+        
+            
+        </div>
+        <div class="city-state">
+            
+                <section>
+                    {{form.state|add_class:"a-i gap style"|attr:"placeholder: Ex. Kentucky"}}
+                    <label>State<span style="color:red">*</span></label>
+                </section>
+                <section>
+                {{form.city|add_class:"a-i style"|attr:"placeholder: Ex. Louisville"}}
+                <label>City<span style="color:red">*</span></label>
+              
+                </section>
+        </div>
+        <div>
+            <section>
+                {{form.county|add_class:"a-i style gap"|attr:"placeholder: Ex. Jefferson County"}}
+               <label>County<span style="color:red">*</span></label>
+            </section>
+            <section>
+                {{form.zip_code|add_class:"a-i style"|attr:"placeholder: Ex. 12345"}}
+                <label>Zipcode<span style="color:red">*</span></label>
+            </section>
+        </div>
+        <h2>Date of Birth & Gender </h2>
+        <div>
+            <section>
+                {{form.birthday|add_class:"b-i-s gap style "}}
+                <label>Day<span style="color:red">*</span></label>
+              
+            </section>
+            <section>
+                {{form.birthmonth|add_class:"b-i-s gap style "}}
+                <label>Month<span style="color:red">*</span></label>
+               
+            </section>
+            <section>
+                {{form.birthyear|add_class:"b-i gap style"|attr:"placeholder:####"}}
+                <label>Year<span style="color:red">*</span></label>
+               
+            </section>
+            <section>
+            
+                {{form.gender|add_class:"b-i-s style"|attr:"placeholder:  "}}
+                <label>Gender<span style="color:red">*</span></label>
+            </section>
+
+            
+        </div>
+        <h2>School</h2>
+        <div>
+            
+            <section>
+                {{form.grade|add_class:"s-i-s gap style"}}
+                <label>Grade Level</label>
+               
+            </section>
+            <section>
+                {{form.school|add_class:"s-i style"|attr:"placeholder: Ex. duPont Manual High School"}}
+                <label>School Name</label>
+            </section>
+        </div>
+        
+   
+        <div class="check">
+            <div>
+                {{form.check}}
+                <p>By checking this box, you agree to receive emails from the Junior Hands Association.<span style="color:red">*</span></p>
+            </div>
+            <div>
+                {{form.readCheck}}
+                <p>By checking this box, you acknowledge that you have read the association's <a href="{% static 'By-laws.pdf' %}" target="_blank">By-Laws</a><span style="color:red">*</span></p>
+            </div>
+            
+        </div>
+        
+        <input class="submit-btn" type="submit" value="Submit">
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Please use a valid email address.
+        </div>
+
+        {% endif %}
+    
+        {% if messages %}
+        <div class="alert alert-success" role="alert" style="margin: 0 auto;text-align:center;">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+    </form>
+</div>
+
+{% endblock %}
